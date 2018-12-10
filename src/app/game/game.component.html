@@ -1,0 +1,17 @@
+<div fxLayout="column" fxLayoutAlign="top">
+  <mat-toolbar>Game of Life</mat-toolbar>
+  <div fxLayout="row" fxLayoutAlign="center">
+    <canvas #myCanvas width="600" height="600" class="gameboard" (click)="activate($event)"></canvas>
+  </div>
+
+  <div class=" buttons" fxLayout="row" fxLayoutAlign="center">
+    <button mat-raised-button (click)="toNext()">Next</button>
+    <button mat-raised-button (click)="toggleTimer()">{{playing ? "Pause" : "Play"}} </button>
+    <button mat-raised-button (click)="clearBoard()">Clear</button>
+    <button mat-raised-button (click)="fillRandom()">Fill Randomly</button>
+    <button mat-raised-button (click)="encode()">Copy Link</button>
+
+
+  </div>
+
+</div>

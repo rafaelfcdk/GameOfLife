@@ -1,17 +1,25 @@
-<div fxLayout="column" fxLayoutAlign="top">
-  <mat-toolbar>Game of Life</mat-toolbar>
-  <div fxLayout="row" fxLayoutAlign="center">
-    <canvas #myCanvas width="600" height="600" class="gameboard" (click)="activate($event)"></canvas>
+<div fxLayout="column wrap" fxLayoutAlign="between center" class="game">
+  <div fxFlexAlign="stretch" fxLayout="row wrap" fxLayoutAlign="end center" fxLayoutGap="20px" class="toolbar">
+    <h3>Game Of Life</h3>
+    <p fxFlex="1 1 auto"></p>
+    <mat-icon fxFlex="0 0 auto" (click)="encode()" style="cursor:pointer">share</mat-icon>
+    <a fxFlex="0 0 auto" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">
+      <mat-icon> help </mat-icon>
+    </a>
   </div>
+  <div fxLayoutAlign="center" fxFlex="0 0">
+    <canvas fxFlex="0 1 100" #myCanvas width="601" height="601" class="gameboard" (click)="activate($event)">
+    </canvas>
+  </div>
+  <div class="buttons" fxLayout="row" fxLayoutAlign="stretch" fxFlex="1 1 auto">
 
-  <div class=" buttons" fxLayout="row" fxLayoutAlign="center">
-    <button mat-raised-button (click)="toNext()">Next</button>
-    <button mat-raised-button (click)="toggleTimer()">{{playing ? "Pause" : "Play"}} </button>
-    <button mat-raised-button (click)="clearBoard()">Clear</button>
-    <button mat-raised-button (click)="fillRandom()">Fill Randomly</button>
-    <button mat-raised-button (click)="encode()">Copy Link</button>
-
-
+    <button fxFlex="1 0 auto" (click)="toggleTimer()">
+      <mat-icon *ngIf="playing">pause</mat-icon>
+      <mat-icon *ngIf="!playing">play_arrow</mat-icon>
+    </button>
+    <button fxFlex="0 0 auto" (click)="toNext()">Next</button>
+    <button fxFlex="0 0 auto" (click)="clearBoard()">Clear</button>
+    <button fxFlex="0 0 auto" (click)="fillRandom()">Random Fill</button>
   </div>
 
 </div>

@@ -2,7 +2,7 @@ export class GameModel {
   private board: number[];
   private start: number[];
   isBound = false;
-  constructor(private cols: number = 40, private rows: number = 40) {
+  constructor(private cols: number = 71, private rows: number = 71) {
     this.board = new Array(cols * rows);
     this.start = new Array(cols * rows);
     this.board.fill(0);

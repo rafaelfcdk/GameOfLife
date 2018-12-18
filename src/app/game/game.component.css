@@ -1,5 +1,10 @@
 .gameboard {
-  border-style: solid;
-  margin: 0.2in;
-  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  border: solid 2px black;
+}
+
+button {
+  margin-top: 0.1in;
+  margin-right: 0.05in;
 }

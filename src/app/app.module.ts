@@ -4,7 +4,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {
   MatGridListModule,
   MatButtonModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatIconModule,
+  MatSnackBarModule
 } from "@angular/material";
 import { Routes, RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
@@ -18,10 +20,12 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     MatButtonModule,
     MatToolbarModule,
     MatGridListModule,
+    MatSnackBarModule,
+    MatIconModule,
     BrowserModule,
     RouterModule.forRoot([
       {
-        path: "gameoflife/:id",
+        path: ":id",
         component: GameComponent
       },
       {

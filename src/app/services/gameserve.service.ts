@@ -6,7 +6,7 @@ import { GameModel } from "../shared/gamemodel";
 export class GameserveService {
   board: GameModel;
   constructor() {
-    this.board = new GameModel(40, 40);
+    this.board = new GameModel();
     this.board.fillRandom();
   }
 

@@ -98,6 +98,7 @@ export class GameComponent implements OnInit {
       }
     }
     this.copyToClipboard(location.origin + "/" + v);
+    console.log(location);
     this.snackBar.open("Link copied to clipboard!", null, { duration: 1000 });
   }
 
